@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 # virturl env
-myenv/
+venv/
 
 # Dot env file
 *.env
