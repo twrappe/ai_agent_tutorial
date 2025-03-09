@@ -7,15 +7,17 @@ from langchain.agents.format_scratchpad import format_to_openai_function_message
 from langchain.agents import AgentExecutor
 from langchain.agents.output_parsers import OpenAIFunctionsAgentOutputParser
 from langchain_core.messages import AIMessage, HumanMessage
- 
+
 # Setup logging
 logging.basicConfig(level=logging.INFO)
 
 # Load the environment variables
 load_dotenv()
 
+# Define which LLM to use
 # gpt-4-11-06-preview is the GPT-4 turbo model launched by OpenAI at their Dev day in 2023
 llm = ChatOpenAI(model="gpt-4-1106-preview", temperature=0)
+
 # Add chat history to the Agent as short term memory
 chat_history = []
 
